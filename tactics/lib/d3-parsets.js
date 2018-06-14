@@ -436,8 +436,8 @@
       var m = d3.mouse(body.node());
       tooltip
           .style("display", null)
-          .style("left", m[0] + 30 + "px")
-          .style("top", m[1] - 20 + "px")
+          .style("left", m[0] - 100 + "px")
+          .style("top", m[1] + 15 + "px")
           .html(html);
     }
 

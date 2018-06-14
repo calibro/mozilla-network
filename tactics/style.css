@@ -41,97 +41,89 @@
   padding: 10px;
   color: white;
   border-radius: 10px;
+  font-size: 0.875rem;
+  width: 100%;
+  max-width: 200px;
 }
 
-/* END d3.parsets.css */
-
-body{
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Zilla Slab', serif;
-  font-weight: 700;
-}
-
-
-.moz-title{
-  color: white;
-  background: black;
-  display: inline-block;
-}
-
-#vis{
-  margin-bottom: 30px;
-}
 
 .category text{
   font-size: 0.875rem;
 }
 
-
-/* body {
-  font-family: sans-serif;
-  font-size: 16px;
-  width: 960px;
-  margin: 1em auto;
-  position: relative;
-}
-h1, h2, .dimension text {
-  text-align: center;
-  font-family: "PT Sans", Helvetica;
-  font-weight: 300;
-}
-h1 {
-  font-size: 4em;
-  margin: .5em 0 0 0;
-}
-h2 {
-  font-size: 2em;
-  margin: 1em 0 0.5em;
-  border-bottom: solid #ccc 1px;
-}
-p.meta, p.footer {
-  font-size: 13px;
-  color: #333;
-}
-p.meta {
-  text-align: center;
-}
-
 text.icicle { pointer-events: none; }
 
-.options { font-size: 12px; text-align: center; padding: 5px 0; }
-.curves { float: left; }
-.source { float: right; }
-pre, code { font-family: "Menlo", monospace; }
+/* END d3.parsets.css */
 
-.html .value,
-.javascript .string,
-.javascript .regexp {
-  color: #756bb1;
+
+body{
+  font-family: 'Libre Franklin', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-.html .tag,
-.css .tag,
-.javascript .keyword {
-  color: #3182bd;
+#viz{
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+  padding: 30px;
 }
 
-.comment {
-  color: #636363;
+.vizCont{
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #e6f6fa;
+  border-left: 1px solid black;
 }
 
-.html .doctype,
-.javascript .number {
-  color: #31a354;
+.popover{
+
 }
 
-.html .attribute,
-.css .attribute,
-.javascript .class,
-.javascript .special {
-  color: #e6550d;
-} */
+.popover-header{
+  background: black;
+  font-weight: 700;
+  color: white;
+  font-family: 'Zilla Slab', serif;
+}
+
+.bs-popover-auto[x-placement^="bottom"] .arrow::after,
+.bs-popover-bottom .arrow::after{
+  border-bottom-color: black;
+}
+
+.popover ol{
+  padding-left: 15px;
+  margin-bottom: 0px;
+}
+
+.zilla{
+  font-family: 'Zilla Slab', serif;
+}
+
+h1,h2,h3,h4,h5,h6,
+.legendTitle{
+  font-family: 'Zilla Slab', serif;
+  font-weight: 700;
+}
+
+
+.desc{
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.row-main{
+  height: calc(100vh - 60px);
+}
+
+.row-footer{
+  height: 60px;
+  border-top: 1px solid black;
+}
+
+.viz-number{
+  border-left: 1px solid black;
+}

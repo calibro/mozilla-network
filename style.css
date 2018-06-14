@@ -1,0 +1,80 @@
+body{
+  font-family: 'Libre Franklin', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+h1,h2,h3,h4,h5,h6,
+.legendTitle{
+  font-family: 'Zilla Slab', serif;
+  font-weight: 700;
+}
+
+
+.vizCont{
+  border-left: 1px solid black;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.coverInteractive{
+  border-bottom: 1px solid black;
+  padding: 0px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  filter: grayscale(0.8);
+  transition: filter 0.2s;
+  cursor: pointer;
+}
+
+.coverInteractive:hover{
+  filter: grayscale(0);
+}
+
+.coverInteractive:last-of-type{
+  border-bottom: none;
+}
+
+.coverInteractive h2{
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.coverInteractive p{
+  font-size: 0.875rem;
+}
+
+.galaxy{
+  background-image: linear-gradient(rgba(230, 246, 250,0.75), rgba(230, 246, 250,0.75)), url('img/galaxy.png');
+}
+
+.tactics{
+  background-image: linear-gradient(rgba(255, 92, 114,0.5), rgba(255, 92, 114,0.5));
+}
+
+.topics{
+  background-image: linear-gradient(rgba(109, 216, 175,0.5), rgba(109, 216, 175,0.5));
+}
+
+.desc{
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.row-main{
+  height: calc(100vh - 60px);
+}
+
+.row-footer{
+  height: 60px;
+  border-top: 1px solid black;
+}
+
+.viz-number{
+  border-left: 1px solid black;
+}

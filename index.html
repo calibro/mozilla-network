@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>IH tactics</title>
+    <title>Mapping the Internet Health Movement</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Zilla+Slab:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -10,16 +10,46 @@
 <body>
   <div class="container-fluid">
     <div class="row row-main">
-      <div class="col-md-4 p-5 desc">
-        <h1 class="font-weight-normal">The Internet <br />Health Tactics</h1>
+      <div class="col-md-5 p-5 desc">
+        <h1 class="font-weight-normal">The Internet <br />Health Movement</h1>
         <p>
           The full list compiled during the 3 days workshop in Toronto contains 583 organizations.
           Each organization is represented by a dot and the area is mapped on the number of original lists the organizations belonged to. Accessnow, EDRi and Wikimedia Foundation appear in 6 different lists (out of 8) while the smallest dots like We Are Open Co-op, Ushahidi or The New School appear just in 1.
         </p>
-
+        <a href="" type="button" class="btn btn-info btn-lg">Download the report</a>
       </div>
-      <div class="col-md-8 vizCont">
-        <div id='viz'>
+      <div class="col-md-7 vizCont d-flex flex-column">
+
+        <div class="coverInteractive flex-fill galaxy" data-href="galaxy/">
+          <div>
+            <span class="badge badge-secondary">interactive</span>
+            <h2>The Galaxy</h2>
+            <p class="w-75">
+              The full list compiled during the 3 days workshop in Toronto contains 583 organizations.
+              Each organization is represented by a dot and the area is mapped on the number of original
+            </p>
+          </div>
+        </div>
+
+        <div class="coverInteractive flex-fill tactics" data-href="tactics/">
+          <div>
+            <span class="badge badge-secondary">interactive</span>
+            <h2>The Tactics</h2>
+            <p class="w-75">
+              The full list compiled during the 3 days workshop in Toronto contains 583 organizations.
+              Each organization is represented by a dot and the area is mapped on the number of original
+            </p>
+          </div>
+        </div>
+        <div class="coverInteractive flex-fill topics" data-href="topics/">
+          <div>
+            <span class="badge badge-secondary">interactive</span>
+            <h2>The Topics</h2>
+            <p class="w-75">
+              The full list compiled during the 3 days workshop in Toronto contains 583 organizations.
+              Each organization is represented by a dot and the area is mapped on the number of original
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -31,18 +61,19 @@
       </div>
       <div class="col-md-1 d-flex h-100">
         <div class="viz-number d-flex align-items-center pl-4">
-          2
+
         </div>
       </div>
     </div>
   </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="lib/d3-parsets.js"></script>
-    <script src="lib/highlight.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+    $(".coverInteractive").click(function() {
+        window.location = $(this).attr("data-href"); 
+        return false;
+        });
+    </script>
   </body>
 </html>

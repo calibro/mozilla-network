@@ -1,4 +1,4 @@
-var width = $("#vis").width()
+var width = $("#viz").width()
 
 var chart = d3.parsets()
     .dimensions(["in relation with Mozilla?", "organization type", "primary tactic", "secondary tactic"])
@@ -7,7 +7,7 @@ var chart = d3.parsets()
     .spacing(100)
     .tension(0.5)
 
-var vis = d3.select("#vis").append("svg")
+var vis = d3.select("#viz").append("svg")
     .attr("width", chart.width())
     .attr("height", chart.height());
 
@@ -27,6 +27,12 @@ function curves() {
   }
   t.call(chart.tension(this.checked ? .5 : 1));
 }
+
+function resize(){
+  vis.call(chart.width($("#viz").width()));
+}
+
+$(window).resize(resize);
 
 d3.tsv("orgs.tsv", function(csv) {
   vis.datum(csv).call(chart);
@@ -171,15 +177,3 @@ function truncateText(text, width) {
     return lo > 1 ? t.substr(0, lo - 2) + "…" : "";
   };
 }
-
-d3.select("#file").on("change", function() {
-  var file = this.files[0],
-      reader = new FileReader;
-  reader.onloadend = function() {
-    var csv = d3.csv.parse(reader.result);
-    vis.datum(csv).call(chart
-        .value(csv[0].hasOwnProperty("Number") ? function(d) { return +d.Number; } : 1)
-        .dimensions(function(d) { return d3.keys(d[0]).filter(function(d) { return d !== "Number"; }).sort(); }));
-  };
-  reader.readAsText(file);
-});
