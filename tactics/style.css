@@ -19,12 +19,12 @@
 .dimension > rect { display: none; }
 .category:hover rect { fill-opacity: .3; }
 .dimension:hover > rect { fill-opacity: .3; }
-.ribbon path { stroke-opacity: 0; fill-opacity: .5; }
-.ribbon path.active { fill-opacity: .9; }
+.ribbon path { stroke-opacity: 0; fill-opacity: .3; }
+.ribbon path.active { fill-opacity: 1; }
 .ribbon-mouse path { fill-opacity: 0; }
 
-.category-0 { fill: #ffe158; stroke: #ffe158; }
-.category-1 { fill: #5fa1f4; stroke: #5fa1f4; }
+.category-1 { fill: #6dd8af; stroke: #6dd8af; }
+.category-0 { fill: #5fa1f4; stroke: #5fa1f4; }
 .category-2 { fill: #ff5c72; stroke: #ff5c72; }
 .category-3 { fill: #6dd8af; stroke: #6dd8af; }
 .category-4 { fill: #6e008b; stroke: #6e008b; }
