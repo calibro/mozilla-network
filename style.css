@@ -61,6 +61,10 @@ h1,h2,h3,h4,h5,h6,
   background-image: linear-gradient(rgba(230, 246, 250,0.75), rgba(230, 246, 250,0.75)), url('img/topics.png');
 }
 
+.timeline{
+  background-image: linear-gradient(rgba(230, 246, 250,0.75), rgba(230, 246, 250,0.75)), url('img/timeline.png');
+}
+
 .desc{
   max-height: 100%;
   overflow-y: auto;
