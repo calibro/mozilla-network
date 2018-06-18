@@ -45,6 +45,14 @@ body{
   font-family: 'Zilla Slab', serif;
 }
 
+.zilla a{
+  color: black;
+}
+
+.zilla a:hover{
+  color: black;
+}
+
 h1,h2,h3,h4,h5,h6,
 .legendTitle{
   font-family: 'Zilla Slab', serif;

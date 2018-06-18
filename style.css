@@ -82,3 +82,15 @@ h1,h2,h3,h4,h5,h6,
 .viz-number{
   border-left: 1px solid black;
 }
+
+.zilla{
+  font-family: 'Zilla Slab', serif;
+}
+
+.zilla a{
+  color: black;
+}
+
+.zilla a:hover{
+  color: black;
+}
