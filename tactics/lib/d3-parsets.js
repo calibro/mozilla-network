@@ -60,6 +60,7 @@
             }
             dimensions.push(cache[d]);
           });
+
           dimensions.sort(compareY);
           // Populate tree with existing nodes.
           g.select(".ribbon").selectAll("path")
@@ -173,10 +174,14 @@
                       .attr("transform", "translate(0," + d.y + ")")
                       .tween("ribbon", ribbonTweenY);
                 }));
+
+
+
           dimension.select("text").select("tspan.sort.alpha")
               .on("click.parsets", sortBy("alpha", function(a, b) { return a.name < b.name ? 1 : -1; }, dimension));
           dimension.select("text").select("tspan.sort.size")
               .on("click.parsets", sortBy("size", function(a, b) { return a.count - b.count; }, dimension));
+
           dimension.transition().duration(duration)
               .attr("transform", function(d) { return "translate(0," + d.y + ")"; })
               .tween("ribbon", ribbonTweenY);
@@ -184,6 +189,15 @@
 
           updateCategories(dimension);
           updateRibbons();
+
+          // start default by size
+          dimensions.forEach(function(d){
+            d.categories.sort(function(a,b) { return d3.descending(a.count,b.count) });
+          })
+          nodes = layout(tree, dimensions, ordinal);
+          updateCategories(dimension);
+          updateRibbons();
+          // end default by size
         }
 
         function sortBy(type, f, dimension) {
