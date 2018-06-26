@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>The Growth of the Movement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Zilla+Slab:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row row-main">
+      <div class="col-md-3 p-5 desc">
+        <h1 class="font-weight-normal">Modes of organization (v2)</h1>
+        <p>
+          With this visualization we can see how the organizations act in the IH space according to the tactics they use. 
+        </p>
+
+      </div>
+      <div class="col-md-9 vizCont">
+        <div id='viz'>
+        </div>
+      </div>
+    </div>
+    <div class="row row-footer align-items-center">
+      <div class="col-md-12 pl-5">
+          <div class="d-flex align-items-center">
+            <img src="img/mozilla-logo-bw-rgb.png" height="30px" width="auto" /> <span class="ml-3 zilla"><a href="/mozilla-network">Mapping the Internet Health Movement</a></span>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script>
+
+    var url  = 'https://public.tableau.com/views/Tactics_matrix/Dashboard5';
+    var size = findDashboardSize();
+    var vizOptions = {
+      showTabs           : false,
+      hideToolbar        : true,
+      width              : size.width + "px",
+      height             : size.height + "px",
+      onFirstInteractive : function (e) {
+        $('.viz iframe').attr("scrolling","no");
+        $('.viz iframe').css('overflow', 'hidden');
+      }
+    };
+
+
+    new tableau.Viz(document.getElementById('viz'), url, vizOptions)
+
+  /**
+   * Finds the correct size of the dashboard in this screen.
+   */
+  function findDashboardSize() {
+
+    var height = $('body').height() - 60 +25;
+    var width = $('#viz').width();
+
+    console.log(height)
+
+
+    return {
+      'width'  : width,
+      'height' : height
+    }
+  }
+
+  /**
+   * Resizes our viz.
+   */
+  function resize() {
+    var size = findDashboardSize();
+    $('#viz').width(size.width);
+    $('#viz').height(size.height);
+    $('#viz iframe').attr("scrolling","no");
+    $('#viz iframe').css('overflow', 'hidden');
+    $('#viz iframe').width(size.width);
+    $('#viz iframe').height(size.height);
+  }
+
+  /**
+   * Hook into the window resize event to resize when the user resizes the screen.
+   */
+  $(window).resize(resize);
+  </script>
+</body>
+</html>
