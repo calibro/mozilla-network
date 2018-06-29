@@ -6,8 +6,8 @@ The Mozilla Foundation has committed to ‘fuel a movement with people around th
 
 Other organizations use terms like ‘open internet’ or ‘digital rights’ or ‘open source’ to refer to a similar set of issues and organizations. For the purposes of this research, we are treating all of these organizations as part of the same loosely knit movement.
 
-- [Download the report in PDF]('https://mozilla.github.io/mozilla-network/report/mapping_the_ih_movement.pdf')
-- [Explore the interactive visualizations]('https://mozilla.github.io/mozilla-network/')
+- [Download the report in PDF](https://mozilla.github.io/mozilla-network/report/mapping_the_ih_movement.pdf)
+- [Explore the interactive visualizations](https://mozilla.github.io/mozilla-network/)
 
 ### Goals
 
