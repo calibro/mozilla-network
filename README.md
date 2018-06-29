@@ -1,3 +1,5 @@
+_This repository collects the interactive visualizations contained in the **Mapping the internet health movement** report._
+
 # Mapping the internet health movement
 
 The Mozilla Foundation has committed to ‘fuel a movement with people around the world to build a healthy internet’.  This project experiments with a mix of methodologies to _observe_ and _analyse_ this movement, looking at organizations that are working on some aspect of making the digital world healthier and better.  Internet health is an umbrella term Mozilla uses to talk about issues like openness, privacy and security, decentralization, digital Inclusion, web literacy.
